@@ -21,4 +21,7 @@ set proxy_password    password
 
 # deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
 deb https://download.docker.com/linux/ubuntu bionic stable
+deb https://download.docker.com/linux/ubuntu noble stable
+deb https://download.docker.com/linux/ubuntu jammy stable
+deb https://download.docker.com/linux/ubuntu focal stable
 # deb https://apt.kubernetes.io kubernetes-bionic main
