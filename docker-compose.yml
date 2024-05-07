@@ -1,0 +1,22 @@
+services:
+
+  alpine:
+    build:
+      context: ./alpine
+    command: /app/alpine-mirror
+    volumes:
+      - ./data/alpine/:/data/alpine/
+
+  ubuntu:
+    build:
+      context: ./ubuntu
+    command: /app/ubuntu-mirror
+    volumes:
+      - ./data/ubuntu/:/data/ubuntu/
+
+  docker:
+    build:
+      context: ./docker
+    command: bash -c "apt-mirror && bash /apt-mirror/postmirror.sh"
+    volumes:
+      - ./data/docker/:/var/spool/apt-mirror
