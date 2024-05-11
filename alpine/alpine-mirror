@@ -10,7 +10,7 @@ src=rsync://rsync.alpinelinux.org/alpine/
 dest=/data/alpine/
 
 # uncomment this to exclude old v2.x branches
-exclude="--exclude v2.*"
+exclude="--exclude v2.* --exclude v3.* --include v3.19*"
 
 echo "Starting..."
 
