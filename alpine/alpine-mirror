@@ -6,7 +6,7 @@ if [ -z "$flock" ] ; then
   exec env flock=1 flock -n $lockfile "$0" "$@"
 fi
 
-src=rsync://rsync.alpinelinux.org/alpine/
+src=rsync://mirrors.tuna.tsinghua.edu.cn/alpine/
 dest=/data/alpine/
 
 # uncomment this to exclude old v2.x branches
