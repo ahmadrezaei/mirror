@@ -13,8 +13,9 @@ exclude="--exclude zesty* --exclude oracular* --exclude yakkety* --exclude xenia
 
 echo "Starting..."
 
-mkdir -p "$dest"
 /usr/bin/rsync \
+        -v \
+        --progress \
         --archive \
         --update \
         --hard-links \
@@ -24,3 +25,5 @@ mkdir -p "$dest"
         --timeout=600 \
         $exclude \
         "$src" "$dest"
+
+echo "Done."

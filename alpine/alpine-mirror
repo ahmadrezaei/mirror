@@ -12,8 +12,11 @@ dest=/data/alpine/
 # uncomment this to exclude old v2.x branches
 exclude="--exclude v2.*"
 
-mkdir -p "$dest"
+echo "Starting..."
+
 /usr/bin/rsync \
+        -v \
+        --progress \
         --archive \
         --update \
         --hard-links \
@@ -23,3 +26,5 @@ mkdir -p "$dest"
         --timeout=600 \
         $exclude \
         "$src" "$dest"
+
+echo "Done."
