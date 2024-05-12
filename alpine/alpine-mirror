@@ -10,7 +10,7 @@ src=rsync://mirrors.tuna.tsinghua.edu.cn/alpine/
 dest=/data/alpine/
 
 # uncomment this to exclude old v2.x branches
-exclude="--exclude v2.*"
+exclude="--exclude v2.* --exclude edge*"
 
 echo "Starting..."
 
